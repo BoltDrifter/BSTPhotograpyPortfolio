@@ -6,52 +6,90 @@
     <title>BST Photography</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <!-- AOS Library -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">BST PHOTOGRAPHY</div>
-            <ul>
-                <li><a href="gallery.html">Gallery</a></li>
-            </ul>
-        </nav>
-        <div class="hero" id="home">
-            <h1>Welcome to My Photography Portfolio</h1>
-            <h2>Baldeep Singh Taluja</h2>
-        </div>
-    </header>
+
+    <nav>
+        <div class="logo">BST PHOTOGRAPHY</div>
+        <ul class="example-1">
+            <li class="icon-content">
+                <a href="https://www.instagram.com/bst.photography_/" aria-label="Instagram" data-social="Instagram" class="link">
+                    <svg fill="#000000" width="30px" height="30px" viewBox="0 0 256 256" id="Flat" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M128,84a44,44,0,1,0,44,44A44.04978,44.04978,0,0,0,128,84Zm0,80a36,36,0,1,1,36-36A36.04061,36.04061,0,0,1,128,164ZM172,32H84A52.059,52.059,0,0,0,32,84v88a52.059,52.059,0,0,0,52,52h88a52.059,52.059,0,0,0,52-52V84A52.059,52.059,0,0,0,172,32Zm44,140a44.04978,44.04978,0,0,1-44,44H84a44.04978,44.04978,0,0,1-44-44V84A44.04978,44.04978,0,0,1,84,40h88a44.04978,44.04978,0,0,1,44,44ZM188,76a8,8,0,1,1-8-8A8.00917,8.00917,0,0,1,188,76Z"/>
+                    </svg>
+                </a>
+                <div class="tooltip">Instagram</div>
+            </li>
+            <li class="icon-content">
+                <a href="https://github.com/BoltDrifter" aria-label="Github" data-social="Github" class="link">
+                    <svg height="30px" viewBox="0 0 1792 1792" width="30px" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1664 896q0 251-146.5 451.5t-378.5 277.5q-27 5-39.5-7t-12.5-30v-211q0-97-52-142 57-6 102.5-18t94-39 81-66.5 53-105 20.5-150.5q0-121-79-206 37-91-8-204-28-9-81 11t-92 44l-38 24q-93-26-192-26t-192 26q-16-11-42.5-27t-83.5-38.5-86-13.5q-44 113-7 204-79 85-79 206 0 85 20.5 150t52.5 105 80.5 67 94 39 102.5 18q-40 36-49 103-21 10-45 15t-57 5-65.5-21.5-55.5-62.5q-19-32-48.5-52t-49.5-24l-20-3q-21 0-29 4.5t-5 11.5 9 14 13 12l7 5q22 10 43.5 38t31.5 51l10 23q13 38 44 61.5t67 30 69.5 7 55.5-3.5l23-4q0 38 .5 89t.5 54q0 18-13 30t-40 7q-232-77-378.5-277.5t-146.5-451.5q0-209 103-385.5t279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z"/>
+                    </svg>
+                </a>
+                <div class="tooltip">Github</div>
+            </li>
+            <li class="icon-content">
+                <a href="https://www.linkedin.com/in/baldeep-t-606348266/" aria-label="LinkedIn" data-social="LinkedIn" class="link">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 0 100 100" id="linkedin">
+                        <path d="M87.877 5.608H11.174c-3.673 0-6.65 2.886-6.65 6.448v77.101c0 3.562 2.978 6.451 6.65 6.451h76.703c3.673 0 6.646-2.89 6.646-6.451V12.056c0-3.561-2.973-6.448-6.646-6.448zM31.809 80.944H18.211V40.31h13.598v40.634zm-6.798-46.185h-.091c-4.56 0-7.516-3.119-7.516-7.023 0-3.983 3.043-7.017 7.693-7.017 4.651 0 7.512 3.033 7.602 7.017 0 3.905-2.95 7.023-7.688 7.023zm55.816 46.185H67.233v-21.74c0-5.464-1.97-9.191-6.886-9.191-3.761 0-5.993 2.515-6.973 4.942-.364.868-.453 2.08-.453 3.292v22.696H39.329s.178-36.823 0-40.634h13.593v5.761c1.805-2.768 5.029-6.717 12.249-6.717 8.947 0 15.656 5.804 15.656 18.291v23.3zM52.834 46.199c.024-.038.056-.084.088-.128v.128h-.088z"/>
+                    </svg>
+                </a>
+                <div class="tooltip">LinkedIn</div>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="hero" id="home" data-aos="fade-up">
+        <h1>Welcome to My Photography Portfolio</h1>
+        <h2>Baldeep Singh Taluja</h2>
+    </div>
+
     <main>
-        <section class="gallery" id="gallery">
+        <section class="gallery" id="gallery" data-aos="zoom-in">
             <h2>Gallery</h2>
             <div class="gallery-grid">
-                <div class="gallery-item">
-                    <img src="images\photo_5830001630387488127_y.jpg" alt="Photo 1" height="400px" width="400px">
+                <div class="gallery-item" data-aos="fade-right">
+                    <img src="images/photo_5830001630387488127_y.jpg" alt="Photo 1" height="400px" width="400px">
                 </div>
-                <div class="gallery-item">
+                <div class="gallery-item" data-aos="fade-right" data-aos-delay="100">
                     <img src="images/photo_5830001630387488123_y.jpg" alt="Photo 2" height="400px" width="400px">
                 </div>
-                <div class="gallery-item">
+                <div class="gallery-item" data-aos="fade-right" data-aos-delay="200">
                     <img src="images/photo_5830001630387488130_y.jpg" alt="Photo 3" height="400px" width="400px">
                 </div>
-                <div class="gallery-item">
-                    <img src="images/photo_5830001630387488135_y.jpg" alt="Photo 3" height="400px" width="400px">
+                <div class="gallery-item" data-aos="fade-right" data-aos-delay="300">
+                    <img src="images/photo_5830001630387488135_y.jpg" alt="Photo 4" height="400px" width="400px">
                 </div>
-                <!-- add more photos as needed -->
             </div>
-            <a href="gallery.html" class="button">VIEW MORE</a>
+            <button class="learn-more" onclick="window.location='gallery.html'">
+                <span class="circle" aria-hidden="true">
+                    <span class="icon arrow"></span>
+                </span>
+                <span class="button-text">All Photos</span>
+            </button>
         </section>
-        <section class="about" id="about">
+
+        <section class="about" id="about" data-aos="fade-up">
             <h2>About Me</h2>
-            <p>Photography has been my passion since I was 10, capturing the world through my lens and telling stories one frame at a time. What started as a simple hobby has blossomed into a creative journey over the years, allowing me to explore various styles and techniques. From the vibrant hues of nature to the raw emotions in candid portraits, each photograph is a piece of art that reflects my unique perspective. Whether it’s the intricate details of macro photography or the expansive beauty of landscapes, my work aims to evoke emotions and inspire others.</p>
+            <p>Photography has been my passion since I was 10, capturing the world through my lens and telling stories one frame at a time. My journey started with a simple point-and-shoot camera, and over the years, it has grown into a professional pursuit. I specialize in landscape and portrait photography, aiming to evoke emotions and tell unique stories through my work.</p>
         </section>
-        <section class="contact" id="contact">
+
+        <section class="contact" id="contact" data-aos="fade-up" data-aos-delay="200">
             <h2>Contact</h2>
-            <p>If you would like to work with me or have any questions, feel free to reach out! <nl>Email:bstphotography2007@gmail.com</nl></p>
-            
+            <p>If you would like to work with me or have any questions, feel free to reach out! <br>Email: bstphotography2007@gmail.com</p>
         </section>
     </main>
-    <footer>    
-        <p>&copy; 2024 Baldeep Singh Taluja. All rights reserved.</p>
-    </footer>
+
+    <!-- AOS Initialization -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000, // Animation duration in milliseconds
+            once: true,     // Animation should happen only once
+            offset: 120,    // Trigger animations after the element is 120px away from the viewport
+        });
+    </script>
 </body>
 </html>

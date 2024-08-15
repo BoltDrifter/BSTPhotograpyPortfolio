@@ -13,12 +13,12 @@ header {
 }
 
 nav {
-    display: flex;
-    justify-content: space-between;
+    display:flex;
+    justify-content:space-evenly;
     align-items: center;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.8);
-    position: fixed;
+    padding: 50px 0px 50px 0px;
+    background-color: rgba(255, 255, 255, 0);
+    position: absolute;
     width: 100%;
     top: 0;
     z-index: 1000;
@@ -27,10 +27,13 @@ nav {
     box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
 nav .logo {
-    font-size: 24px;
+    font-size: 25px;
     font-weight: 700;
 }
 
+.logo { 
+    text-align: center ;
+}
 nav ul {
     list-style: none;
     display: flex;
@@ -53,7 +56,8 @@ nav ul li a:hover {
 }
 
 .hero {
-    background: #018585;;
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(155,148,233,1) 80%, rgba(148,151,233,1) 93%);
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -71,13 +75,16 @@ nav ul li a:hover {
     font-size: 24px;
 }
 
-main {
-    padding: 60px 20px 20px;
-}
 
 .gallery {
+    opacity: 0; /* Initial state */
+    animation: fadeIn 1s ease-in-out forwards;
+    border: 10px;
     text-align: center;
     padding: 40px 20px;
+    border-top: 8px double rgb(0, 0, 0);
+    border-bottom: 8px double rgb(0, 0, 0);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(155,148,233,1) 80%, rgba(148,151,233,1) 93%);
 }
 
 .gallery h2 {
@@ -94,10 +101,10 @@ main {
 
 .gallery-item {
     flex: 1 1 calc(33.333% - 20px);
-    height: auto;
-    width: auto;
+    max-width: 70%;
+    max-height: 70%;
     margin: 23px;
-    overflow: show;
+    overflow: autp;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -109,13 +116,22 @@ main {
     transition: transform 0.2s;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 .gallery-item img:hover {
     transform: scale(1.05);
 }
 
+
 .about, .contact {
+    opacity: 0; /* Initial state */
+    animation: fadeIn 4ms ease-in-out forwards;
+    background-color: rgb(162, 151, 230);                   
     text-align: center;
     padding: 40px 20px;
+    
 }
 
 .about h2, .contact h2 {
@@ -200,29 +216,184 @@ form button:hover {
         font-size: 16px;
     }
 }
-.button {
-    background-color: #057074; /* Green background */
-    border: none; /* Remove borders */
-    color: white; /* White text */
-    padding: 15px 32px; /* Some padding */
-    text-align: center; /* Centered text */
-    text-decoration: none; /* Remove underline */
-    display: inline-block; /* Make the container fit the content */
-    font-size: 16px; /* Increase font size */
-    margin: 4px 2px; /* Some margin */
-    cursor: pointer; /* Pointer/hand icon */
-    border-radius: 8px; /* Rounded corners */
-    transition: background-color 0.3s, transform 0.3s;
-    transform: scale(1.25); /* Animation for hover effect */
+/* From Uiverse.io by cssbuttons-io */ 
+button {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    background: transparent;
+    padding: 0;
+    font-size: inherit;
+    font-family: inherit;
+   }
+   
+   button.learn-more {
+    width: 12rem;
+    height: auto;
+   }
+   
+   button.learn-more .circle {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: relative;
+    display: block;
+    margin: 0;
+    width: 3rem;
+    height: 3rem;
+    background: #282936;
+    border-radius: 1.625rem;
+   }
+   
+   button.learn-more .circle .icon {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: #fff;
+   }
+   
+   button.learn-more .circle .icon.arrow {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    left: 0.625rem;
+    width: 1.125rem;
+    height: 0.125rem;
+    background: none;
+   }
+   
+   button.learn-more .circle .icon.arrow::before {
+    position: absolute;
+    content: "";
+    top: -0.29rem;
+    right: 0.0625rem;
+    width: 0.625rem;
+    height: 0.625rem;
+    border-top: 0.125rem solid #fff;
+    border-right: 0.125rem solid #fff;
+    transform: rotate(45deg);
+   }
+   
+   button.learn-more .button-text {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0.75rem 0;
+    margin: 0 0 0 1.85rem;
+    color: #282936;
+    font-weight: 700;
+    line-height: 1.6;
+    text-align: center;
+    text-transform: uppercase;
+   }
+   
+   button:hover .circle {
+    width: 100%;
+   }
+   
+   button:hover .circle .icon.arrow {
+    background: #fff;
+    transform: translate(1rem, 0);
+   }
+   
+   button:hover .button-text {
+    color: #fff;
+   }
+
+ul {
+    list-style: none;
   }
   
-  .button:hover {
-    background-color: #000000; /* Darker green */
-    transform: scale(1.05); /* Slightly increase size */
+  .example-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bolder; /* Made bolder */
+    background-color: #000000; /* Black background */
+    border-radius: 30px; /* Added border-radius to make the container rounded */
+    padding: 20px; /* Added padding for better appearance */
+    height: 35px;
+    width: 250px;
   }
   
-  .button:active {
-    background-color: #3e8e41; /* Even darker green when clicked */
-    transform: scale(1); /* Return to original size */
+  .example-1 .icon-content {
+    margin: 0 10px;
+    position: relative;
+    font-weight: bolder; /* Made bolder */
   }
   
+  .example-1 .icon-content .tooltip {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff; /* White background */
+    color: #000; /* Black text */
+    padding: 6px 10px;
+    border-radius: 5px;
+    opacity: 0;
+    visibility: hidden;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    font-weight: bolder; /* Made bolder */
+  }
+  
+  .example-1 .icon-content:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+    top: -50px;
+  }
+  
+  .example-1 .icon-content .link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: #fff; /* White icons */
+    background-color: #000; /* Black background */
+    transition: all 0.3s ease-in-out;
+    font-weight: bolder; /* Made bolder */
+  }
+  
+  .example-1 .icon-content .link:hover {
+    box-shadow: 3px 2px 45px 0px rgb(0 0 0 / 12%);
+  }
+  
+  .example-1 .icon-content .link svg {
+    width: 40px;
+    height: 40px;
+    fill: #fff; /* White icons */
+  }
+  
+  .example-1 .icon-content .link[data-social="Instagram"]:hover {
+    color: #df20b5;
+  }
+  
+  .example-1 .icon-content .link[data-social="pinterest"]:hover {
+    color: #bd081c;
+  }
+  
+  .example-1 .icon-content .link[data-social="dribbble"]:hover {
+    color: #ea4c89;
+  }
+  
+  .example-1 .icon-content .link[data-social="telegram"]:hover {
+    color: #0088cc;
+  }
+  @keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
