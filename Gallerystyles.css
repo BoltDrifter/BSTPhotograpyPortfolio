@@ -89,23 +89,23 @@ main {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 5px;
+    gap: 20px; /* Increased gap for better spacing */
 
 }
 
 .gallery-item {
-    flex: 1 1 calc(33.333% - 20px);
-    height: auto;
-    width: auto;
-    margin: 23px;
-    overflow: show;
+    flex: 1 1 calc(33.333% - 40px); /* Adjusted to keep consistent spacing */
+    max-width: 300px; /* Set a max width to control the item size */
+    margin: 10px; /* Adjusted margin for better alignment */
+    overflow: hidden;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center; /* Center text/content inside the item */
 }
 
 .gallery-item img {
-    width: 100%;
-    height: auto;
+    width: 100%;  /* Keep the width at 100% of the container */
+    height: auto; /* Maintain aspect ratio */
     display: block;
     transition: transform 0.2s;
 }
