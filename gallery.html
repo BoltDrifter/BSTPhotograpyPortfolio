@@ -6,46 +6,36 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gallery</title>
-
 </head>
 <body>
     <header>
-        <nav>
-            <div class="logo">BST PHOTOGRAPHY</div>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-            </ul>
-        </nav>
+            <nav>
+        <div class="logo">BST PHOTOGRAPHY</div>
+        <ul id="nav-links">
+            <li><a href="index.html">Home</a></li>
+        </ul>
+        <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+    </nav>
     </header>
     <main>
         <section class="gallery" id="gallery">
             <h2>Gallery</h2>
             <div class="gallery-grid">
-                <nl>
                 <div class="gallery-item">
                     <img src="images/photo_5830001630387488137_y.jpg" alt="Photo 5" height="400px" width="400px">
                 </div>
-                </nl>
-                <nl>
-                    <div class="gallery-item">
-                        <img src="images/photo_5830001630387488134_y.jpg" alt="Photo 10" height="400px" width="400px">
-                    </div>
-                </nl>
-                <nl>
-                    <div class="gallery-item">
-                        <img src="images/photo_5830001630387488129_y.jpg" alt="Photo 15" height="400px" width="400px">
-                    </div>
-                </nl>
-                <nl>
-                    <div class="gallery-item">
-                        <img src="images/photo_5861732732806219913_y.jpg" alt="Photo 28" height="400px" width="400px">
-                    </div>
-                </nl>
-                <nl>
-                    <div class="gallery-item">
-                        <img src="images/photo_5906781588212008117_y.jpg" alt="Photo 28" height="400px" width="400px">
-                    </div>
-                </nl>
+                <div class="gallery-item">
+                    <img src="images/photo_5830001630387488134_y.jpg" alt="Photo 10" height="400px" width="400px">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/photo_5830001630387488129_y.jpg" alt="Photo 15" height="400px" width="400px">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/photo_5861732732806219913_y.jpg" alt="Photo 28" height="400px" width="400px">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/photo_5906781588212008117_y.jpg" alt="Photo 28" height="400px" width="400px">
+                </div>
                 <div class="gallery-item">
                     <img src="images/photo_5830001630387488125_y.jpg" alt="Photo 1" height="400px" width="400px">
                 </div>
@@ -148,9 +138,18 @@
                 <div class="gallery-item">  
                     <img src="images/photo_5884187955701074822_y.jpg" alt="Photo 40" height="400px" width="400px">
                 </div>
-
-                <!-- Add more photos as needed -->
             </div>
         </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 BST PHOTOGRAPHY</p>
+    </footer>
+
+    <div id="photo-modal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modal-img">
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
