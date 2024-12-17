@@ -1,33 +1,29 @@
-// Get the modal
-var modal = document.getElementById("photo-modal");
+document.addEventListener("DOMContentLoaded", () => {
+    const carousels = document.querySelectorAll('.carousel'); // Select all carousels
 
-// Get the image and insert it inside the modal - use its "alt" text as a caption
-var modalImg = document.getElementById("modal-img");
-var galleryItems = document.querySelectorAll(".gallery-item img");
+    carousels.forEach(carousel => {
+        const slides = carousel.querySelectorAll('.carousel-slide');
+        const prevButton = carousel.querySelector('.carousel-prev');
+        const nextButton = carousel.querySelector('.carousel-next');
+        const carouselContainer = carousel.querySelector('.carousel-container');
+        let currentIndex = 0;
 
-galleryItems.forEach(function(item) {
-    item.addEventListener('click', function() {
-        modal.style.display = "block";
-        modalImg.src = this.src;
+        function updateCarousel(index) {
+            const offset = -index * 100; // Moves by 100% for each slide
+            carouselContainer.style.transform = `translateX(${offset}%)`;
+        }
+
+        prevButton.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+            updateCarousel(currentIndex);
+        });
+
+        nextButton.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % slides.length;
+            updateCarousel(currentIndex);
+        });
+
+        // Initialize carousel
+        updateCarousel(currentIndex);
     });
-});
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-    modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
-// JavaScript for responsive nav
-document.getElementById("menu-toggle").addEventListener("click", function() {
-  let navLinks = document.getElementById("nav-links");
-  navLinks.classList.toggle("active");
 });

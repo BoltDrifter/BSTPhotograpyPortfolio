@@ -82,8 +82,8 @@ nav ul li a:hover {
     border: 10px;
     text-align: center;
     padding: 40px 20px;
-    border-top: 8px double rgb(0, 0, 0);
-    border-bottom: 8px double rgb(0, 0, 0);
+    border-top: 8px solid rgb(0, 0, 0);
+    border-bottom: 8px solid rgb(0, 0, 0);
     background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(155,148,233,1) 80%, rgba(148,151,233,1) 93%);
 }
 
@@ -101,10 +101,10 @@ nav ul li a:hover {
 
 .gallery-item {
     flex: 1 1 calc(33.333% - 20px);
-    max-width: 70%;
-    max-height: 70%;
+    max-width: 35%;
+    max-height: 35%;
     margin: 23px;
-    overflow: autp;
+    border: beige;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
