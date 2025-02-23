@@ -82,8 +82,8 @@ nav ul li a:hover {
     border: 10px;
     text-align: center;
     padding: 40px 20px;
-    border-top: 8px solid rgb(0, 0, 0);
-    border-bottom: 8px solid rgb(0, 0, 0);
+    border-top: 8px double rgb(0, 0, 0);
+    border-bottom: 8px double rgb(0, 0, 0);
     background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(155,148,233,1) 80%, rgba(148,151,233,1) 93%);
 }
 
@@ -101,10 +101,10 @@ nav ul li a:hover {
 
 .gallery-item {
     flex: 1 1 calc(33.333% - 20px);
-    max-width: 35%;
-    max-height: 35%;
+    max-width: 70%;
+    max-height: 70%;
     margin: 23px;
-    border: beige;
+    overflow: autp;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -131,7 +131,7 @@ html{
     background-color: rgb(162, 151, 230);                   
     text-align: center;
     padding: 40px 20px;
-    
+
 }
 
 .about h2, .contact h2 {
@@ -230,12 +230,12 @@ button {
     font-size: inherit;
     font-family: inherit;
    }
-   
+
    button.learn-more {
     width: 12rem;
     height: auto;
    }
-   
+
    button.learn-more .circle {
     transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
     position: relative;
@@ -246,7 +246,7 @@ button {
     background: #282936;
     border-radius: 1.625rem;
    }
-   
+
    button.learn-more .circle .icon {
     transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
     position: absolute;
@@ -255,7 +255,7 @@ button {
     margin: auto;
     background: #fff;
    }
-   
+
    button.learn-more .circle .icon.arrow {
     transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
     left: 0.625rem;
@@ -263,7 +263,7 @@ button {
     height: 0.125rem;
     background: none;
    }
-   
+
    button.learn-more .circle .icon.arrow::before {
     position: absolute;
     content: "";
@@ -275,7 +275,7 @@ button {
     border-right: 0.125rem solid #fff;
     transform: rotate(45deg);
    }
-   
+
    button.learn-more .button-text {
     transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
     position: absolute;
@@ -291,16 +291,16 @@ button {
     text-align: center;
     text-transform: uppercase;
    }
-   
+
    button:hover .circle {
     width: 100%;
    }
-   
+
    button:hover .circle .icon.arrow {
     background: #fff;
     transform: translate(1rem, 0);
    }
-   
+
    button:hover .button-text {
     color: #fff;
    }
@@ -308,7 +308,7 @@ button {
 ul {
     list-style: none;
   }
-  
+
   .example-1 {
     display: flex;
     justify-content: center;
@@ -320,13 +320,13 @@ ul {
     height: 35px;
     width: 250px;
   }
-  
+
   .example-1 .icon-content {
     margin: 0 10px;
     position:relative;
     font-weight: bolder; /* Made bolder */
   }
-  
+
   .example-1 .icon-content .tooltip {
     position: absolute;
     top: -30px;
@@ -342,13 +342,13 @@ ul {
     transition: all 0.3s ease;
     font-weight: bolder; /* Made bolder */
   }
-  
+
   .example-1 .icon-content:hover .tooltip {
     opacity: 1;
     visibility: visible;
     top: -50px;
   }
-  
+
   .example-1 .icon-content .link {
     display: flex;
     justify-content: center;
@@ -361,29 +361,29 @@ ul {
     transition: all 0.3s ease-in-out;
     font-weight: bolder; /* Made bolder */
   }
-  
+
   .example-1 .icon-content .link:hover {
     box-shadow: 3px 2px 45px 0px rgb(0 0 0 / 12%);
   }
-  
+
   .example-1 .icon-content .link svg {
     width: 40px;
     height: 40px;
     fill: #fff; /* White icons */
   }
-  
+
   .example-1 .icon-content .link[data-social="Instagram"]:hover {
     color: #df20b5;
   }
-  
+
   .example-1 .icon-content .link[data-social="pinterest"]:hover {
     color: #bd081c;
   }
-  
+
   .example-1 .icon-content .link[data-social="dribbble"]:hover {
     color: #ea4c89;
   }
-  
+
   .example-1 .icon-content .link[data-social="telegram"]:hover {
     color: #0088cc;
   }
@@ -426,4 +426,3 @@ ul {
         height: auto; /* Adjust height for smaller screens */
     }
 }
-
